@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// -------------------- SUPERCLASS --------------------
+//SUPERCLASS
 abstract class PlanItem {
     protected String title;
     protected int daysUntil;           // Days until activity happens
@@ -15,7 +15,7 @@ abstract class PlanItem {
         this.completed = false;
     }
 
-    // Common Methods
+
     public void markCompleted() {
         this.completed = true;
     }
@@ -32,7 +32,7 @@ abstract class PlanItem {
         return title;
     }
 
-    // Abstract methods to enforce subclass-specific behavior
+
     public abstract int calculateUrgency();
     public abstract String getCategory();
 
@@ -46,7 +46,7 @@ abstract class PlanItem {
     }
 }
 
-// -------------------- SUBCLASS 1 --------------------
+//SUBCLASS 1
 class Assignment extends PlanItem {
 
     public Assignment(String title, int daysUntil, double estimatedHours) {
@@ -65,7 +65,7 @@ class Assignment extends PlanItem {
     }
 }
 
-// -------------------- SUBCLASS 2 --------------------
+//SUBCLASS 2
 class ExamPreparation extends PlanItem {
 
     public ExamPreparation(String title, int daysUntil, double estimatedHours) {
@@ -84,7 +84,7 @@ class ExamPreparation extends PlanItem {
     }
 }
 
-// -------------------- SUBCLASS 3 --------------------
+//SUBCLASS 3
 class ClubEvent extends PlanItem {
 
     public ClubEvent(String title, int daysUntil, double estimatedHours) {
@@ -108,7 +108,7 @@ class ClubEvent extends PlanItem {
     }
 }
 
-// -------------------- MAIN PROGRAM --------------------
+//MAIN PROGRAM
 public class polymorphysm{
 
     public static void main(String[] args) {
@@ -124,7 +124,7 @@ public class polymorphysm{
         // Mark one as completed
         planner.get(0).markCompleted();
 
-        // Print all items (Polymorphism in action)
+        // Print all items (Polymorphysm in action)
         System.out.println("---- All Plan Items ----");
         for (PlanItem item : planner) {
             System.out.println(item.getDetails());
